@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- SEO -->
+<title>AVS School Gallery| Best School for Holistic Education in Sonipat</title>
+<meta name="description" content="Arya Vaidic Sr. Sec. School provides quality education with focus on academics, sports, STEM, and character building." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<!-- Apple -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Android -->
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* Gallery specific styles */
+        .gallery-section {
+            padding: 5rem 0;
+            background: #fffef5;
+        }
+        
+        .gallery {
+            columns: 4;
+            column-gap: 15px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            margin-bottom: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 103, 31, 0.3);
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease, opacity 0.3s ease;
+            z-index: 9999;
+        }
+
+        .popup.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: pop-in 0.4s ease;
+        }
+
+        @keyframes pop-in {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: transform 0.3s ease, color 0.3s ease;
+            z-index: 10000;
+        }
+
+        .popup .close:hover {
+            transform: scale(1.2) rotate(90deg);
+            color: #ff671f;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery {
+                columns: 3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                columns: 2;
+            }
+            
+            .popup .close {
+                top: 10px;
+                right: 20px;
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <a href="tel:+1234567890" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9991715612, +91 8053531811</span>
+                        </a>
+                        <a href="mailto:info@school.edu" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>info.avs2025@gmail.com</span>
+                        </a>
+                    </div>
+                    <div class="school-hours">
+                        <span>School Hours: Mon-Fri 8:00 AM - 3:30 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img src="logo.png" style="width: 75px" alt="" />
+                        </div>
+                        <div class="logo-text">
+                            <h1>ARYA VAIDIC SR. SEC. SCHOOL</h1>
+                            <p>Nurturing Young Minds</p>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="desktop-nav">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index.html#about" class="nav-link">About</a>
+                        <a href="index.html#academics" class="nav-link">Academics</a>
+                        <a href="index.html#admissions" class="nav-link">Admissions</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </nav>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <nav class="mobile-nav" id="mobileNav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#academics" class="nav-link">Academics</a>
+                    <a href="index.html#admissions" class="nav-link">Admissions</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Gallery</h2>
+                <p>Explore the vibrant moments captured at Arya Vaidic Sr. Sec. School</p>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <img src="https://lh3.googleusercontent.com/d/1tdpqbZFUH9ynQn51kM2pnCgR5biVtWoH" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1YHRoY6D1fU4ZYuuXJ9AblBsKIDzxYoJu" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/11DofghXLZwWio0lo1_YivhTIWFT3P_Qn" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1MYZVjnMfUDwLb_XBP9WuzkIcQQhUXx-a" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1b5Qh3ag2PVey2j1Cka83AeAmef2J6fc8" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1Y-7eWS_m3uzp3MX5GP90_pZz1h2lQ6aU" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1AfwZmqGPdXW-w6j3oph7fM8mEA6vBINA" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1Z4fdq-0I9edJxBGuVx08RTqQN65TfdiE" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1cTMa010F9ucu3jy_12QkglKMvxhZWkjF" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1szlmk9AVO9ONH89ytAo_eDsgJk3Jo8cb" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1axXLnovk8LKvjCCOhCsb7skSi1Sjl7pu" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1QemTGCdeU2o8EYwaTFD16BiguU6DZ1NY" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1LHPt5roQ2AetpthCi_USWLzHd3K70s1l" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1JaSEzAxn0tqVc9Z8CH1wshRQpFCx_IXH" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1rshzKUR2p6DsxVuQ-HBdq-HYwuiG2Wlu" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1o0MMWY_q-CN-i1tUpsmIrNgnwrA1HNS_" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/154zQpgZGnWMV7TvVXzGYP3Rrqmdtejbk" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1WsDZy0eRJvR2aNM_OvponwMx6EnMqb2N" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/130mHXJw4VGjyUjg-uaP68hWGkgnDiG4P" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1V0lqpMBJSyIc8yfqBhq-OtV3alAzqEE3" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/17T3x1MDP9N-vlWLeWeoEkjRTUGDaYjUa" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1kWO-QJcXgJMYEsCm1YLhi-fdRpEa1sGT" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1U32RVHR1uAp6WBHBNNg61hGYdFVkb__U" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1BE0zRbc4IPtjiKiCoy1jf1weQzHZn2cE" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1vlYkRp6xsVhwNqD1ACOoWW2kiL0dyIM_" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1G3_GPnpzt5o128rapksovkgRd7w3ex4w" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1FoDxR0jjnrv3D6iJl7aeoDFLmBeF18H0" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1dUhGbhkvqzzlQ1YWBjZlJludpUhqPtjn" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/152KwPouil1O_Qx3Y7fd6GPD-ZkBbA9Gw" alt="AVS Gallery" loading="lazy">
+            <img src="https://lh3.googleusercontent.com/d/1zp812pP8a_VFQziFyHjjQiO-9OIgI117" alt="AVS Gallery" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Popup for Image Preview -->
+    <div class="popup" id="popup">
+        <button class="close" id="close">&times;</button>
+        <img src="" alt="Popup Image" id="popup-img">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <img src="logo.png" style="width: 75px" alt="" />
+                        </div>
+                        <h3>Arya Vaidic Sr. Sec. School</h3>
+                    </div>
+                    <p style="color: #edc5b2">Nurturing young minds and building tomorrow's leaders.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#academics">Academics</a></li>
+                        <li><a href="index.html#admissions">Admissions</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>Bahalgarh-Meerut Road</li>
+                        <li>Khewra, Sonipat (131021) Haryana, INDIA</li>
+                        <li>Phone: +91 9991715612, +91 8053531811</li>
+                        <li>Email: info.avs2025@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p style="color: #edc5b2">Subscribe to get updates about our school</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" />
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p style="color: #edc5b2">&copy; 2026 Arya Vaidic Sr. Sec. School. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery Popup Functionality
+        const gallery = document.querySelector('.gallery');
+        const popup = document.getElementById('popup');
+        const popupImg = document.getElementById('popup-img');
+        const close = document.getElementById('close');
+
+        gallery.addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG') {
+                popupImg.src = e.target.src;
+                popup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        close.addEventListener('click', () => {
+            popup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popup.classList.contains('active')) {
+                popup.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
+
