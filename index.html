@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- SEO -->
-<title>AVS School Gallery| Best School for Holistic Education in Sonipat</title>
+<title>AVS School | Best School for Holistic Education in Sonipat</title>
 <meta name="description" content="Arya Vaidic Sr. Sec. School provides quality education with focus on academics, sports, STEM, and character building." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,338 +21,1187 @@
 <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-        /* Gallery specific styles */
-        .gallery-section {
-            padding: 5rem 0;
-            background: #fffef5;
-        }
-        
-        .gallery {
-            columns: 4;
-            column-gap: 15px;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-        .gallery img {
-            width: 100%;
-            margin-bottom: 15px;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+  </head>
+  <body>
+    <!-- Advertisement Popup -->
+    <div id="ad-popup" onclick="closeAd()">
+      <div class="ad-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeAd()">✕</button>
+        <img src="ads01.png" alt="School Advertisement" />
+      </div>
+    </div>
 
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(255, 103, 31, 0.3);
-        }
-
-        .popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0.3s ease, opacity 0.3s ease;
-            z-index: 9999;
-        }
-
-        .popup.active {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .popup img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            animation: pop-in 0.4s ease;
-        }
-
-        @keyframes pop-in {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .popup .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 40px;
-            color: #fff;
-            cursor: pointer;
-            background: none;
-            border: none;
-            transition: transform 0.3s ease, color 0.3s ease;
-            z-index: 10000;
-        }
-
-        .popup .close:hover {
-            transform: scale(1.2) rotate(90deg);
-            color: #ff671f;
-        }
-
-        @media (max-width: 1024px) {
-            .gallery {
-                columns: 3;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .gallery {
-                columns: 2;
-            }
-            
-            .popup .close {
-                top: 10px;
-                right: 20px;
-                font-size: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery {
-                columns: 1;
-            }
-        }
-    </style>
-</head>
-<body>
     <!-- Header -->
     <header class="header">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="container">
-                <div class="top-bar-content">
-                    <div class="contact-info">
-                        <a href="tel:+1234567890" class="contact-link">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 9991715612, +91 8053531811</span>
-                        </a>
-                        <a href="mailto:info@school.edu" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>info.avs2025@gmail.com</span>
-                        </a>
-                    </div>
-                    <div class="school-hours">
-                        <span>School Hours: Mon-Fri 8:00 AM - 3:30 PM</span>
-                    </div>
-                </div>
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="top-bar-content">
+            <div class="contact-info">
+              <a href="tel:+1234567890" class="contact-link">
+                <i class="fas fa-phone"></i>
+                <span>+91 9991715612, +91 8053531811</span>
+              </a>
+              <a href="mailto:info@school.edu" class="contact-link">
+                <i class="fas fa-envelope"></i>
+                <span>info.avs2025@gmail.com</span>
+              </a>
             </div>
-        </div>
-
-        <!-- Main Navigation -->
-        <div class="main-nav">
-            <div class="container">
-                <div class="nav-content">
-                    <div class="logo">
-                        <div class="logo-icon">
-                            <img src="logo.png" style="width: 75px" alt="" />
-                        </div>
-                        <div class="logo-text">
-                            <h1>ARYA VAIDIC SR. SEC. SCHOOL</h1>
-                            <p>Nurturing Young Minds</p>
-                        </div>
-                    </div>
-
-                    <!-- Desktop Navigation -->
-                    <nav class="desktop-nav">
-                        <a href="index.html" class="nav-link">Home</a>
-                        <a href="index.html#about" class="nav-link">About</a>
-                        <a href="index.html#academics" class="nav-link">Academics</a>
-                        <a href="index.html#admissions" class="nav-link">Admissions</a>
-                        <a href="gallery.html" class="nav-link">Gallery</a>
-                        <a href="index.html#contact" class="nav-link">Contact</a>
-                    </nav>
-
-                    <!-- Mobile Menu Button -->
-                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-
-                <!-- Mobile Navigation -->
-                <nav class="mobile-nav" id="mobileNav">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="index.html#about" class="nav-link">About</a>
-                    <a href="index.html#academics" class="nav-link">Academics</a>
-                    <a href="index.html#admissions" class="nav-link">Admissions</a>
-                    <a href="gallery.html" class="nav-link">Gallery</a>
-                    <a href="index.html#contact" class="nav-link">Contact</a>
-                </nav>
+            <div class="school-hours">
+              <span>School Hours: Mon-Fri 8:00 AM - 3:30 PM</span>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Main Navigation -->
+      <div class="main-nav">
+        <div class="container">
+          <div class="nav-content">
+            <div class="logo">
+              <div class="logo-icon">
+                <img src="logo.png" style="width: 75px" alt="" />
+              </div>
+              <div class="logo-text">
+                <h1>ARYA VAIDIC SR. SEC. SCHOOL</h1>
+                <p>Nurturing Young Minds</p>
+              </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+              <a href="#home" class="nav-link">Home</a>
+              <a href="#about" class="nav-link">About</a>
+              <a href="#academics" class="nav-link">Academics</a>
+              <a href="gallery.html" class="nav-link">Gallery</a>
+              <a href="#admissions" class="nav-link">Admissions</a>
+              <!-- <a href="#blogs" class="nav-link">Blogs</a> -->
+              <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button
+              class="mobile-menu-btn"
+              id="mobileMenuBtn"
+              aria-label="Toggle menu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <nav class="mobile-nav" id="mobileNav">
+            <a href="#home" class="nav-link">Home</a>
+              <a href="#about" class="nav-link">About</a>
+              <a href="#academics" class="nav-link">Academics</a>
+              <a href="gallery.html" class="nav-link">Gallery</a>
+              <a href="#admissions" class="nav-link">Admissions</a>
+              <!-- <a href="#blogs" class="nav-link">Blogs</a> -->
+              <a href="#contact" class="nav-link">Contact</a>
+          </nav>
+        </div>
+      </div>
     </header>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Gallery</h2>
-                <p>Explore the vibrant moments captured at Arya Vaidic Sr. Sec. School</p>
-            </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <img src="building.jpg" alt="Students at school campus" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-text animate-fade-up">
+          <h2 class="hero-title">Welcome to AVS</h2>
+          <p class="hero-subtitle">
+            Empowering students from Primary to Senior Secondary (PP1-XII) with
+            quality education, nurturing character & building tomorrow's
+            leaders.
+          </p>
+          <div class="hero-buttons">
+            <a href="#admissions" class="btn btn-primary">
+              Apply Now
+              <i class="fas fa-chevron-right"></i>
+            </a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+          </div>
         </div>
-
-        <div class="gallery">
-            <img src="https://lh3.googleusercontent.com/d/1tdpqbZFUH9ynQn51kM2pnCgR5biVtWoH" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1YHRoY6D1fU4ZYuuXJ9AblBsKIDzxYoJu" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/11DofghXLZwWio0lo1_YivhTIWFT3P_Qn" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1MYZVjnMfUDwLb_XBP9WuzkIcQQhUXx-a" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1b5Qh3ag2PVey2j1Cka83AeAmef2J6fc8" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1Y-7eWS_m3uzp3MX5GP90_pZz1h2lQ6aU" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1AfwZmqGPdXW-w6j3oph7fM8mEA6vBINA" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1Z4fdq-0I9edJxBGuVx08RTqQN65TfdiE" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1cTMa010F9ucu3jy_12QkglKMvxhZWkjF" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1szlmk9AVO9ONH89ytAo_eDsgJk3Jo8cb" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1axXLnovk8LKvjCCOhCsb7skSi1Sjl7pu" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1QemTGCdeU2o8EYwaTFD16BiguU6DZ1NY" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1LHPt5roQ2AetpthCi_USWLzHd3K70s1l" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1JaSEzAxn0tqVc9Z8CH1wshRQpFCx_IXH" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1rshzKUR2p6DsxVuQ-HBdq-HYwuiG2Wlu" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1o0MMWY_q-CN-i1tUpsmIrNgnwrA1HNS_" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/154zQpgZGnWMV7TvVXzGYP3Rrqmdtejbk" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1WsDZy0eRJvR2aNM_OvponwMx6EnMqb2N" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/130mHXJw4VGjyUjg-uaP68hWGkgnDiG4P" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1V0lqpMBJSyIc8yfqBhq-OtV3alAzqEE3" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/17T3x1MDP9N-vlWLeWeoEkjRTUGDaYjUa" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1kWO-QJcXgJMYEsCm1YLhi-fdRpEa1sGT" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1U32RVHR1uAp6WBHBNNg61hGYdFVkb__U" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1BE0zRbc4IPtjiKiCoy1jf1weQzHZn2cE" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1vlYkRp6xsVhwNqD1ACOoWW2kiL0dyIM_" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1G3_GPnpzt5o128rapksovkgRd7w3ex4w" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1FoDxR0jjnrv3D6iJl7aeoDFLmBeF18H0" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1dUhGbhkvqzzlQ1YWBjZlJludpUhqPtjn" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/152KwPouil1O_Qx3Y7fd6GPD-ZkBbA9Gw" alt="AVS Gallery" loading="lazy">
-            <img src="https://lh3.googleusercontent.com/d/1zp812pP8a_VFQziFyHjjQiO-9OIgI117" alt="AVS Gallery" loading="lazy">
-        </div>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </section>
 
-    <!-- Popup for Image Preview -->
-    <div class="popup" id="popup">
-        <button class="close" id="close">&times;</button>
-        <img src="" alt="Popup Image" id="popup-img">
-    </div>
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Choose Arya Vaidic Sr. Sec. School?</h2>
+          <p>
+            We provide a nurturing environment where every child can thrive
+            academically, socially & emotionally from their first day through
+            graduation.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3>Academic Excellence</h3>
+            <p>
+              Comprehensive curriculum designed to nurture intellectual
+              curiosity and critical thinking.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Experienced Faculty</h3>
+            <p>
+              Dedicated teachers committed to bringing out the best in every
+              student.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3>Holistic Development</h3>
+            <p>
+              Focus on academics, sports, arts & extracurricular activities for
+              well-rounded growth.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Safe Environment</h3>
+            <p>
+              Nurturing and secure campus where students feel valued, respected
+              and encouraged.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- School Notice Board Section -->
+    <section class="notice-board">
+      <div class="container">
+        <div class="section-header">
+          <div class="notice-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h2 class="section-title">School Notice Board</h2>
+          <p>
+            Stay updated with the latest announcements and important notices
+          </p>
+        </div>
+
+        <div class="notice-board-grid">
+          <!-- Pinned Notice -->
+          <article class="notice-card pinned">
+            <div class="notice-header">
+              <div class="notice-date-badge">
+                <span class="month">Jan</span>
+                <span class="day">26</span>
+              </div>
+              <div>
+                <span class="notice-category">Holiday Notice</span>
+              </div>
+            </div>
+            <div class="notice-content">
+              <h3>Republic Day Holiday</h3>
+              <p>
+                School will remain closed on January 26th, 2026 (Monday) on the
+                occasion of Republic Day. Classes will resume as normal from
+                January 27th, 2026.
+              </p>
+            </div>
+            <div class="notice-footer">
+              <div class="notice-meta">
+                <i class="fas fa-user-shield"></i>
+                <span>Administration</span>
+              </div>
+              <a href="#" class="notice-read-more">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Notice 2 -->
+          <article class="notice-card">
+            <div class="notice-header">
+              <div class="notice-date-badge">
+                <span class="month">Feb</span>
+                <span class="day">01</span>
+              </div>
+              <div>
+                <span class="notice-category">Admissions</span>
+              </div>
+            </div>
+            <div class="notice-content">
+              <h3>Admissions Open for 2026-27</h3>
+              <p>
+                Admissions are now open for the new academic year 2026-27 from
+                PP1 to Class XII. Apply now and secure your child's future with
+                quality education.
+              </p>
+            </div>
+            <div class="notice-footer">
+              <div class="notice-meta">
+                <i class="fas fa-user-plus"></i>
+                <span>Admission Office</span>
+              </div>
+              <a href="#admissions" class="notice-read-more">
+                Apply Now <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Notice 3 -->
+          <!-- <article class="notice-card">
+            <div class="notice-header">
+              <div class="notice-date-badge">
+                <span class="month">Jan</span>
+                <span class="day">30</span>
+              </div>
+              <div>
+                <span class="notice-category">Exam Schedule</span>
+              </div>
+            </div>
+            <div class="notice-content">
+              <h3>Annual Examination Schedule</h3>
+              <p>
+                The annual examination schedule for Classes I-XII has been
+                released. Parents are requested to check the detailed schedule
+                from their respective class teachers.
+              </p>
+            </div>
+            <div class="notice-footer">
+              <div class="notice-meta">
+                <i class="fas fa-book"></i>
+                <span>Academic Dept</span>
+              </div>
+              <a href="#" class="notice-read-more">
+                View Schedule <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article> -->
+
+          <!-- Notice 4 -->
+          <!-- <article class="notice-card">
+            <div class="notice-header">
+              <div class="notice-date-badge">
+                <span class="month">Feb</span>
+                <span class="day">08</span>
+              </div>
+              <div>
+                <span class="notice-category">Event</span>
+              </div>
+            </div>
+            <div class="notice-content">
+              <h3>Parent-Teacher Meeting</h3>
+              <p>
+                A Parent-Teacher Meeting has been scheduled for February 8th,
+                2026. Parents are cordially invited to meet their ward's
+                teachers to discuss academic progress and overall development.
+              </p>
+            </div>
+            <div class="notice-footer">
+              <div class="notice-meta">
+                <i class="fas fa-users"></i>
+                <span>PTM Committee</span>
+              </div>
+              <a href="#" class="notice-read-more">
+                Details <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article> -->
+
+          <!-- Notice 5 -->
+          <!-- <article class="notice-card">
+            <div class="notice-header">
+              <div class="notice-date-badge">
+                <span class="month">Feb</span>
+                <span class="day">15</span>
+              </div>
+              <div>
+                <span class="notice-category">Sports</span>
+              </div>
+            </div>
+            <div class="notice-content">
+              <h3>Annual Sports Day</h3>
+              <p>
+                AVS Annual Sports Day 2026 will be held on February 15th, 2026.
+                Parents are invited to witness the athletic excellence of our
+                students. Entry passes available at the school office.
+              </p>
+            </div>
+            <div class="notice-footer">
+              <div class="notice-meta">
+                <i class="fas fa-running"></i>
+                <span>Sports Department</span>
+              </div>
+              <a href="#" class="notice-read-more">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article> -->
+
+          <!-- Notice 6 -->
+          <!-- <article class="notice-card">
+            <div class="notice-header">
+              <div class="notice-date-badge">
+                <span class="month">Jan</span>
+                <span class="day">28</span>
+              </div>
+              <div>
+                <span class="notice-category">Uniform</span>
+              </div>
+            </div>
+            <div class="notice-content">
+              <h3>Winter Uniform Guidelines</h3>
+              <p>
+                Students may wear winter uniforms (school sweater/ blazer) from
+                November 1st onwards until March 31st. Students must wear ID
+                cards daily. Forgot ID cards must be reported to the class
+                teacher.
+              </p>
+            </div>
+            <div class="notice-footer">
+              <div class="notice-meta">
+                <i class="fas fa-tshirt"></i>
+                <span>Discipline Dept</span>
+              </div>
+              <a href="#" class="notice-read-more">
+                Guidelines <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div> -->
+
+        <div class="notice-board-cta">
+          <a href="#" class="btn btn-primary">
+            View All Notices
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principal and Manager Message Section -->
+    <section class="leadership-message">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Message from Our Leadership</h2>
+          <p>Dedicated to excellence in education and holistic development</p>
+        </div>
+
+        <div class="leadership-cards">
+          <!-- Principal Message -->
+          <div class="leadership-card">
+            <div class="leadership-image">
+              <img src="nk_1.jpg" alt="Principal" />
+              <div class="leadership-overlay">
+                <span class="leadership-title">Principal</span>
+              </div>
+            </div>
+            <div class="leadership-content">
+              <h3>Ms. Neeru Kaushik</h3>
+              <span class="leadership-role">School Principal</span>
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="leadership-quote">
+                Education is not just about filling minds with knowledge, but
+                igniting the spark of curiosity and nurturing the love for
+                lifelong learning. At Arya Vaidic Sr. Sec. School, we are
+                committed to developing well-rounded individuals who will become
+                compassionate leaders of tomorrow.
+              </p>
+            </div>
+          </div>
+
+          <!-- Manager Message -->
+          <div class="leadership-card">
+            <div class="leadership-image">
+              <img src="sk.jpg" alt="Manager" />
+              <div class="leadership-overlay">
+                <span class="leadership-title">Director</span>
+              </div>
+            </div>
+            <div class="leadership-content">
+              <h3>Mr. Sunil Kaushik</h3>
+              <span class="leadership-role">M D</span>
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="leadership-quote">
+                Our mission is to provide a supportive and innovative learning
+                environment where every student can discover their unique
+                talents and reach their full potential. We believe in fostering
+                excellence through dedication, innovation and a strong
+                partnership with families.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="image-slider-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Vibrant Campus Life</h2>
+          <p>Experience the energy and excellence of our school community</p>
+        </div>
+      </div>
+
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          <!-- Original slides -->
+          <div class="slide">
+            <img src="gallery/AVS29.JPG" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="gallery/AVS19.JPG" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="building.jpg" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="gallery/AVS17.JPG" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="gallery/AVS30.JPG" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="gallery/AVS26.JPG" alt="AVS" />
+          </div>
+          <!-- Duplicate slides for seamless loop -->
+          <div class="slide">
+            <img src="gallery/AVS29.JPG" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="gallery/AVS19.JPG" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="building.jpg" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="gallery/AVS17.JPG" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="gallery/AVS30.JPG" alt="AVS" />
+          </div>
+          <div class="slide">
+            <img src="gallery/AVS26.JPG" alt="AVS" />
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-cta" style="text-align: center; margin-top: 2rem;">
+        <a href="gallery.html" class="btn btn-primary">
+          View More Photos
+          <i class="fas fa-images"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- School Levels Section -->
+    <section id="academics" class="school-levels">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Academic Levels</h2>
+          <p>
+            From early childhood to college preparation, we offer a seamless
+            educational journey tailored to each developmental stage.
+          </p>
+        </div>
+
+        <div class="levels-container">
+          
+          <!-- Pre-Primary Section -->
+          <div class="level-card level-card-reverse">
+            <div class="level-image">
+              <img
+                src="22222.jpg"
+                alt="Pre-Primary Section"
+              />
+              <div class="level-overlay"></div>
+            </div>
+            <div class="level-content">
+              <span class="level-badge">Grades PP1-PP3</span>
+              <h3>Pre-Primary Section</h3>
+              <p>
+                Developing critical thinking and analytical skills with a focus
+                on comprehensive subject knowledge and character building.
+              </p>
+              <div class="level-features">
+                <div class="level-feature">
+                  <i class="fas fa-microscope"></i>
+                  <span>STEM education</span>
+                </div>
+                <div class="level-feature">
+                  <i class="fas fa-trophy"></i>
+                  <span>Sports & competitions</span>
+                </div>
+                <div class="level-feature">
+                  <i class="fas fa-music"></i>
+                  <span>Music & performing arts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary Section -->
+          <div class="level-card">
+            <div class="level-image">
+              <img
+                src="class.jpg"
+                alt="Primary Section"
+              />
+              <div class="level-overlay"></div>
+            </div>
+            <div class="level-content">
+              <span class="level-badge">Grades 1-5</span>
+              <h3>Primary Section</h3>
+              <p>
+                Building strong foundations in literacy, numeracy and social
+                skills through interactive and play-based learning.
+              </p>
+              <div class="level-features">
+                <div class="level-feature">
+                  <i class="fas fa-users"></i>
+                  <span>STEM education</span>
+                </div>
+                <div class="level-feature">
+                  <i class="fas fa-book-open"></i>
+                  <span>Activity-based learning</span>
+                </div>
+                <div class="level-feature">
+                  <i class="fas fa-palette"></i>
+                  <span>Art & craft programs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Section -->
+          <div class="level-card level-card-reverse">
+            <div class="level-image">
+              <img
+                src="gallery/avs02.JPG"
+                alt="Middle Section"
+              />
+              <div class="level-overlay"></div>
+            </div>
+            <div class="level-content">
+              <span class="level-badge">Grades 6-8</span>
+              <h3>Middle Section</h3>
+              <p>
+                Developing critical thinking and analytical skills with a focus
+                on comprehensive subject knowledge and character building.
+              </p>
+              <div class="level-features">
+                <div class="level-feature">
+                  <i class="fas fa-microscope"></i>
+                  <span>Building champions through discipline and drive</span>
+                </div>
+                <div class="level-feature">
+                  <i class="fas fa-trophy"></i>
+                  <span>Play hard. Lead strong. Win together.</span>
+                </div>
+                <div class="level-feature">
+                  <i class="fas fa-music"></i>
+                  <span>Turning creativity into confident expression</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Senior Secondary Section -->
+          <div class="level-card">
+            <div class="level-image">
+              <img
+                src="https://images.unsplash.com/photo-1762354766812-86025ea7e2bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwbW9kZXJufGVufDF8fHx8MTc2OTU5NjIxM3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Senior Secondary Section"
+              />
+              <div class="level-overlay"></div>
+            </div>
+            <div class="level-content">
+              <span class="level-badge">Grades 9-12</span>
+              <h3>Senior Secondary Section</h3>
+              <p>
+                Preparing students for higher education and career success with
+                rigorous academics and college counseling.
+              </p>
+              <div class="level-features">
+                <div class="level-feature">
+                  <i class="fas fa-book-open"></i>
+                  <span>Multiple streams available</span>
+                </div>
+                <div class="level-feature">
+                  <i class="fas fa-users"></i>
+                  <span>College counseling</span>
+                </div>
+                <div class="level-feature">
+                  <i class="fas fa-trophy"></i>
+                  <span>Train smarter &  Compete stronger.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="section-header">
+            <h2 class="section-title">About AVS</h2>
+            <p>
+              Established in 1999, Arya Vaidic Sr. Sec. School has been a
+              cornerstone of quality education for over 26 years, nurturing
+              thousands of students into successful individuals.
+            </p>
+          </div>
+
+          <div class="mission-vision">
+            <div class="mission-vision-content">
+              <div class="mission-box">
+                <div class="mission-icon">
+                  <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>
+                  To provide a stimulating learning environment that empowers
+                  students to achieve academic excellence, develop strong
+                  character and become responsible global citizens ready to
+                  face the challenges of tomorrow.
+                </p>
+              </div>
+
+              <div class="vision-box">
+                <div class="vision-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>
+                  To be recognized as a leading educational institution that
+                  transforms lives through innovative teaching methods,
+                  comprehensive development programs and a commitment to
+                  excellence in all aspects of education.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="values">
+            <h3 class="values-title">Our Core Values</h3>
+            <div class="values-grid">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="value-text">
+                  <h4>Excellence</h4>
+                  <p>Striving for the highest standards in everything we do</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="value-text">
+                  <h4>Integrity</h4>
+                  <p>Building character through honesty and ethical behavior</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="value-text">
+                  <h4>Inclusivity</h4>
+                  <p>Celebrating diversity and respecting every individual</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="value-text">
+                  <h4>Innovation</h4>
+                  <p>Encouraging creativity and forward-thinking</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="admissions">
+      <div class="container">
+        <div class="admissions-content">
+          <div class="section-header">
+            <h2 class="section-title">Admissions</h2>
+            <p>
+              Join the
+              <span style="color: #ff671f; font-weight: bold">AVS</span> family!
+              We welcome applications for all grades throughout the year,
+              subject to availability.
+            </p>
+          </div>
+
+          <div class="admission-info">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h3>Important Dates</h3>
+              <ul class="dates-list">
+                <li>
+                  <span>Application Opens:</span>
+                  <strong>February 1, 2026</strong>
+                </li>
+                <!-- <li>
+                  <span>Last Date to Apply:</span>
+                  <strong>March 31, 2026</strong>
+                </li>
+                <li>
+                  <span>Entrance Test:</span>
+                  <strong>April 15-20, 2026</strong>
+                </li>
+                <li>
+                  <span>Results Announced:</span>
+                  <strong>May 1, 2026</strong>
+                </li> -->
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <h3>Required Documents</h3>
+              <ul class="documents-list">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Birth Certificate (Original & Copy)</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Previous School Transcript</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Transfer Certificate </span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Parent/Guardian ID Proof</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span>Recent Passport-sized Photographs</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="admission-cta">
+            <button class="btn btn-primary btn-large">
+              Download Application Form
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <!-- <section id="blogs" class="blogs">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Latest News & Blogs</h2>
+          <p>
+            Stay updated with the latest happenings, achievements, and insights
+            from AVS
+          </p>
+        </div>
+
+        <div class="blogs-grid">
+          <article class="blog-card">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+                alt="Students learning together"
+              />
+              <div class="blog-category">Education</div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="fas fa-calendar"></i> January 25, 2026</span>
+                <span><i class="fas fa-user"></i> By Admin</span>
+              </div>
+              <h3>Innovative Teaching Methods Transform Student Learning</h3>
+              <p>
+                Discover how our faculty implements cutting-edge teaching
+                strategies to enhance student engagement and comprehension in
+                the classroom.
+              </p>
+              <a href="#" class="blog-read-more">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+                alt="Graduation ceremony"
+              />
+              <div class="blog-category">Achievements</div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="fas fa-calendar"></i> January 20, 2026</span>
+                <span><i class="fas fa-user"></i> By Principal</span>
+              </div>
+              <h3>AVS Students Win National Science Competition</h3>
+              <p>
+                Our senior students secured top positions in the prestigious
+                National Science Olympiad, showcasing their exceptional talents
+                and dedication.
+              </p>
+              <a href="#" class="blog-read-more">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+                alt="Sports day"
+              />
+              <div class="blog-category">Events</div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="fas fa-calendar"></i> January 15, 2026</span>
+                <span><i class="fas fa-user"></i> By Sports Dept</span>
+              </div>
+              <h3>Annual Sports Day Celebrates Athletic Excellence</h3>
+              <p>
+                Our vibrant Annual Sports Day brought together students,
+                parents, and staff for a day of competition, teamwork, and
+                celebration of physical fitness.
+              </p>
+              <a href="#" class="blog-read-more">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="blogs-cta">
+          <a href="#" class="btn btn-secondary" style="color: #ff671f"
+            >View All Blogs</a
+          >
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="section-header">
+            <h2 class="section-title">Contact Us</h2>
+            <p>
+              We'd love to hear from you! Get in touch with us for any inquiries
+              or to schedule a campus visit.
+            </p>
+          </div>
+
+          <div class="contact-content">
+            <!-- Contact Information -->
+            <div class="contact-info-section">
+              <div class="contact-info-card">
+                <h3>Get In Touch</h3>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-item-text">
+                    <h4>Address</h4>
+                    <p>
+                      Bahalgarh-Meerut Road<br />Khewra, Sonipat<br />Haryana,
+                      INDIA
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="contact-item-text">
+                    <h4>Phone</h4>
+                    <p>
+                      Main: +91 9991715612, +91 8053531811<br />+91 7419000204
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-item-text">
+                    <h4>Email</h4>
+                    <p>info.avs2025@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="contact-item-text">
+                    <h4>Office Hours</h4>
+                    <p>
+                      Monday - Saturday: 8:00 AM - 4:00 PM<br />Sunday: Closed
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+              <div class="contact-form-card">
+                <h3>Send Us a Message</h3>
+                <form class="contact-form" id="contactForm">
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="your.email@example.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      placeholder="+91 (234) 567-890"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      placeholder="How can we help you?"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-full">
+                    Send Message
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <div class="footer-logo-icon">
-                            <img src="logo.png" style="width: 75px" alt="" />
-                        </div>
-                        <h3>Arya Vaidic Sr. Sec. School</h3>
-                    </div>
-                    <p style="color: #edc5b2">Nurturing young minds and building tomorrow's leaders.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#academics">Academics</a></li>
-                        <li><a href="index.html#admissions">Admissions</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <ul class="footer-contact">
-                        <li>Bahalgarh-Meerut Road</li>
-                        <li>Khewra, Sonipat (131021) Haryana, INDIA</li>
-                        <li>Phone: +91 9991715612, +91 8053531811</li>
-                        <li>Email: info.avs2025@gmail.com</li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Newsletter</h4>
-                    <p style="color: #edc5b2">Subscribe to get updates about our school</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email" />
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <div class="footer-logo">
+              <div class="footer-logo-icon">
+                <img src="logo.png" style="width: 75px" alt="" />
+              </div>
+              <h3>Arya Vaidic Sr. Sec. School</h3>
             </div>
-
-            <div class="footer-bottom">
-                <p style="color: #edc5b2">&copy; 2026 Arya Vaidic Sr. Sec. School. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Sitemap</a>
-                </div>
+            <p style="color: #edc5b2">
+              Nurturing young minds and building tomorrow's leaders.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
+          </div>
+
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#academics">Academics</a></li>
+              <li><a href="#admissions">Admissions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul class="footer-contact">
+              <li>Bahalgarh-Meerut Road</li>
+              <li>Khewra, Sonipat (131021) Haryana, INDIA</li>
+              <li>Phone: +91 9991715612, +91 8053531811</li>
+              <li>Email: info.avs2025@gmail.com</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Newsletter</h4>
+            <p style="color: #edc5b2">
+              Subscribe to get updates about our school
+            </p>
+            <form class="newsletter-form" id="newsletterForm">
+  <input
+    type="email"
+    id="newsletterEmail"
+    placeholder="Your email"
+    required
+  />
+  <button type="submit">
+    <i class="fas fa-paper-plane"></i>
+  </button>
+</form>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p style="color: #edc5b2">
+            &copy; 2026 Arya Vaidic Sr. Sec. School. All rights reserved.
+          </p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
+      <i class="fas fa-chevron-up"></i>
     </button>
 
     <script src="script.js"></script>
+
+
+
+
+
     <script>
-        // Gallery Popup Functionality
-        const gallery = document.querySelector('.gallery');
-        const popup = document.getElementById('popup');
-        const popupImg = document.getElementById('popup-img');
-        const close = document.getElementById('close');
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbykv-Igy50iaUB6YrrM_V1e7D9rHkaXvwO9hMfCwqlhb0JKYtftxh670OfaE5TWTXB3/exec";
 
-        gallery.addEventListener('click', (e) => {
-            if (e.target.tagName === 'IMG') {
-                popupImg.src = e.target.src;
-                popup.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        });
+/* CONTACT FORM */
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-        close.addEventListener('click', () => {
-            popup.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
+  const data = {
+    type: "contact",
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    message: document.getElementById("message").value
+  };
 
-        popup.addEventListener('click', (e) => {
-            if (e.target === popup) {
-                popup.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert("Message sent successfully!");
+    this.reset();
+  })
+  .catch(err => {
+    console.error(err);
+    alert("Failed to send message");
+  });
+});
 
-        // Close popup with Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && popup.classList.contains('active')) {
-                popup.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-    </script>
-</body>
+/* NEWSLETTER */
+document.getElementById("newsletterForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = {
+    type: "newsletter",
+    email: document.getElementById("newsletterEmail").value
+  };
+
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert('Thank you for subscribing AVS!');
+    this.reset();
+  })
+  .catch(err => {
+    console.error(err);
+    alert("Subscription failed");
+  });
+});
+</script>
+  </body>
 </html>
-
